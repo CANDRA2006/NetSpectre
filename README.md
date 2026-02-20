@@ -37,6 +37,7 @@ NetSpectre/
 ├── LICENSE                     # Lisensi perangkat lunak
 ├── .gitignore                  # Pengecualian berkas Git
 ├── README.md                   # Dokumentasi utama proyek
+├── netspectre.log              # Berkas log aktivitas pemindaian
 ├── .env                        # Variabel lingkungan (tidak dikomit)
 │
 ├── core/                       # Modul inti pemindaian
@@ -44,8 +45,11 @@ NetSpectre/
 │   ├── port_scanner.py         # Mesin pemindaian port TCP multithreaded
 │   ├── host_discovery.py       # Penemuan host aktif dalam jaringan
 │   ├── banner_grabber.py       # Pengambil banner layanan
+│   ├── service_fingerprint.py  # Identifikasi layanan berdasarkan port dan banner
 │   ├── ttl_fingerprint.py      # Estimasi OS berbasis nilai TTL
-│   └── risk_engine.py          # Mesin penilaian dan klasifikasi risiko
+│   ├── detector.py             # Deteksi OS berbasis port terbuka
+│   ├── risk_engine.py          # Mesin penilaian dan klasifikasi risiko
+│   └── reporter.py             # Generator laporan JSON dan HTML
 │
 ├── detection/                  # Modul deteksi dan pemantauan
 │   ├── __init__.py
@@ -59,11 +63,7 @@ NetSpectre/
 │   ├── config_loader.py        # Pemuat konfigurasi YAML
 │   └── helpers.py              # Fungsi-fungsi pembantu umum
 │
-├── reports/                    # Modul pembuatan laporan
-│   ├── html_report.py          # Generator laporan HTML
-│   └── json_report.py          # Generator laporan JSON
-│
-├── wordlists/                  # Basis data referensi
+├── wordlist/                   # Basis data referensi
 │   └── common_ports.txt        # Daftar port umum yang sering dipindai
 │
 ├── tests/                      # Pengujian unit dan integrasi
@@ -142,8 +142,6 @@ Parameter-parameter ini dapat disesuaikan berdasarkan kapasitas sistem dan kondi
 ## Peringatan dan Etika Penggunaan
 
 > **PERINGATAN:** NetSpectre dirancang **hanya** untuk digunakan pada sistem dan jaringan yang dimiliki sendiri atau yang telah mendapatkan izin eksplisit dari pemilik atau administrator yang berwenang.
-
-Penggunaan perangkat lunak ini tanpa otorisasi yang sah dapat melanggar ketentuan hukum yang berlaku, termasuk namun tidak terbatas pada Undang-Undang Informasi dan Transaksi Elektronik (UU ITE) di Indonesia serta regulasi keamanan siber di yurisdiksi lainnya. Pengembang tidak bertanggung jawab atas segala bentuk penyalahgunaan perangkat lunak ini.
 
 ---
 

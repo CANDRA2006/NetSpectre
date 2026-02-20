@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+reports/
+nmap_output.json
+.vscode/
+.env

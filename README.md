@@ -63,6 +63,8 @@ NetSpectre/
 │   ├── config_loader.py        # Pemuat konfigurasi YAML
 │   └── helpers.py              # Fungsi-fungsi pembantu umum
 │
+|── reports/                    # Folder laporan (tidak dicommit disini)
+|
 ├── wordlist/                   # Basis data referensi
 │   └── common_ports.txt        # Daftar port umum yang sering dipindai
 │

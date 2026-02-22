@@ -28,7 +28,7 @@ Sebelum memulai instalasi, pastikan lingkungan sistem telah memenuhi persyaratan
 Unduh repositori NetSpectre menggunakan Git:
 
 ```bash
-git clone https://github.com/username/NetSpectre.git
+git clone https://github.com/candra2006/NetSpectre.git
 cd NetSpectre
 ```
 

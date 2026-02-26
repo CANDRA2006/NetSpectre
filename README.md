@@ -96,7 +96,7 @@ Sebelum menjalankan NetSpectre, pastikan sistem telah memenuhi persyaratan berik
 ### 1. Kloning Repositori
 
 ```bash
-git clone https://github.com/username/NetSpectre.git
+git clone https://github.com/candra2006/NetSpectre.git
 cd NetSpectre
 ```
 
